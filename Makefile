@@ -4,6 +4,7 @@ OUTPUT_DIR := ${ROOT_DIR}/dist
 $(shell mkdir -p ${OUTPUT_DIR})
 
 clean:
+	find -type d -name node_modules -exec rm -rf {} \; 
 	rm -rf dist/*
 
 webot-nats:

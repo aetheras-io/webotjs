@@ -39,16 +39,15 @@ function onLogout(user) {
 }
 
 async function onMessage(msg) {
-  console.log('=================')
-  console.log(msg.payload)
-  console.log('=================')
-
   stan.publish(channel, JSON.stringify(msg.payload, null, 2), function (err, guid) {
+    console.log('=================')
+    console.log(msg.payload)
     if (err) {
       console.log('publish failed: ' + err);
     } else {
       console.log('published message with guid: ' + guid);
     }
+    console.log('=================')
   });
 }
 
