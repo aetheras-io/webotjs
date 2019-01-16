@@ -1,0 +1,21 @@
+{
+    "name": "nats-to-file",
+    "version": "0.1.0",
+    "description": "nats-to-file",
+    "engines": {
+        "node": ">= 10"
+    },
+    "scripts": {
+        "start": "node src/index.js"
+    },
+    "keywords": [],
+    "author": "Denis Tsai <denistsai@aetheras.io>",
+    "license": "MIT",
+    "homepage": "https://www.aetheras.io",
+    "dependencies": {
+        "node-nats-streaming": "0.0.51"
+    },
+    "devDependencies": {
+        "check-node-version": "^3.2.0"
+    }
+}

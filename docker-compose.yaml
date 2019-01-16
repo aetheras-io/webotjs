@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  nats-streaming:
+    image: nats-streaming:latest
+    entrypoint: /nats-streaming-server -store file -dir datastore
+    restart: always
+    volumes:
+      - ./dist/nats-streaming/datastore:/datastore
+    ports:
+      - "4222:4222"
+      - "8222:8222"
