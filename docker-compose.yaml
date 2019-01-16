@@ -1,7 +1,8 @@
 version: '3.5'
 
 services:
-  nats-streaming:
+  nats-streaming-server:
+    container_name: nats-streaming-server
     image: nats-streaming:latest
     entrypoint: /nats-streaming-server -store file -dir datastore
     restart: always
